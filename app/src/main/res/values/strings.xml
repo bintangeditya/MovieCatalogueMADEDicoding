@@ -1,0 +1,38 @@
+<resources>
+    <string name="code_lang">en-US</string>
+    <string name="app_name">TheSubmissionBE</string>
+    <string name="app_bar_title">BeFLIX.</string>
+    <string name="language">Lang</string>
+    <string name="movie_bnav">Movie</string>
+    <string name="tv_show_bnav">TV Show</string>
+    <string name="fav_bnav">Favorite</string>
+    <string name="search_bnav">Search</string>
+    <string name="reminder_bnav">Reminder</string>
+    <string name="hour">h</string>
+    <string name="minute">min</string>
+    <string name="season_str">season</string>
+    <string name="release_str">release</string>
+    <string name="duration_str">duration</string>
+    <string name="overview_str">overview</string>
+    <string name="fav_movie_note">You donot have any favorite movies yet</string>
+    <string name="fav_tvshow_note">You donot have any favorite tv show yet</string>
+    <string name="warn_loading_fav">Is saving to favorites…</string>
+    <string name="succeed_fav">Successfully saved to favorites</string>
+    <string name="delete_fav">Removed from favorites</string>
+    <string name="wait">Please wait…</string>
+    <string name="stackwidget_title">BeFLIX. FAVORITE</string>
+    <string name="no_fav_note">You donot have any favorite movies or tv show yet</string>
+    <string name="no_overview">(there is no overview in English)</string>
+    <string name="release_reminder_txt">Release Reminder</string>
+    <string name="release_reminder_note">Reminder showing the movie that released today</string>
+    <string name="daily_reminder_txt">Daily Reminder</string>
+    <string name="daily_reminder_note">Reminder for return to app</string>
+    <string name="message_daily">When was the last time you visited BeFLIX, lets check your favorite movie or tv show on BeFLIX</string>
+    <string name="notification_channel_description">BeFLIX</string>
+    <string name="todo">TODO</string>
+    <string name="empty">---</string>
+
+
+    <!--<string name="hello_blank_fragment">Hello blank fragment</string>-->
+
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".search.SearchFragment">
+
+    <SearchView
+            android:background="#f0f0f0"
+            android:id="@+id/sv_custom"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"/>
+
+    <TextView
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="@string/movie_bnav"
+            android:background="@drawable/bg_rounded_blue"
+            android:textColor="@color/mWhite"
+            android:id="@+id/btn_search_movie"
+            android:layout_width="0dp" android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintTop_toBottomOf="@+id/sv_custom"
+            android:layout_marginTop="8dp"/>
+
+    <TextView
+            android:textSize="16sp"
+            android:gravity="center"
+            android:text="@string/tv_show_bnav"
+            android:textColor="@color/mBlack"
+            android:background="@drawable/bg_rounded_grey"
+            android:id="@+id/btn_search_tvshow"
+            android:layout_width="0dp" android:layout_height="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            android:layout_marginStart="4dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/sv_custom"
+            android:layout_marginTop="8dp"/>
+
+    <android.support.constraint.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline"
+            app:layout_constraintGuide_percent="0.5"/>
+
+    <android.support.v7.widget.RecyclerView
+            tools:listitem="@layout/item_list"
+            android:id="@+id/rc_search"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_search_movie"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+            android:id="@+id/iv_loading"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="64dp"
+            app:layout_constraintTop_toTopOf="@+id/rc_search"/>
+
+</android.support.constraint.ConstraintLayout>

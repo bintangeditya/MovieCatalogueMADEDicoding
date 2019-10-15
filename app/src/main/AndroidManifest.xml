@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="id.editya.thesubmissionbe">
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <permission android:name="id.editya.thesubmissionbe.READ_DATABASE" android:protectionLevel="normal"/>
+    <permission android:name="id.editya.thesubmissionbe.WRITE_DATABASE" android:protectionLevel="normal"/>
+
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity android:name=".DetailActivity"
+                  android:launchMode="singleTask">
+        </activity>
+        <activity android:name=".MainActivity"
+                  android:launchMode="singleTask"
+        >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+
+        <receiver android:name="id.editya.thesubmissionbe.stackwidget.ImagesBannerWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+
+            <meta-data
+                    android:name="android.appwidget.provider"
+                    android:resource="@xml/stackwidget_provider"/>
+        </receiver>
+
+        <service
+                android:name="id.editya.thesubmissionbe.stackwidget.StackWidgetService"
+                android:permission="android.permission.BIND_REMOTEVIEWS"/>
+
+        <receiver
+                android:name="id.editya.thesubmissionbe.remider.AlarmReceiver"
+                android:enabled="true"/>
+
+        <service
+                android:name="id.editya.thesubmissionbe.remider.NotificationService"
+                android:enabled="true"/>
+
+        <provider
+                android:name="id.editya.thesubmissionbe.contentProvider.FavProvider"
+                android:authorities="id.editya.thesubmissionbe"
+                android:exported="true"
+                android:readPermission="id.editya.thesubmissionbe.READ_DATABASE"
+                android:writePermission="id.editya.thesubmissionbe.WRITE_DATABASE"/>
+
+
+    </application>
+
+</manifest>

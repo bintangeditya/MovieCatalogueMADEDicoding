@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="11">
+
+        <TextView
+                android:paddingTop="5dp"
+                android:paddingBottom="8dp"
+                android:id="@+id/tv_widget_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_black_italic"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/bg_half_rounded"
+                android:text="@string/stackwidget_title"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+        <StackView
+                android:id="@+id/stack_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:loopViews="true"/>
+
+
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/tv_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_round"
+            android:text="@string/no_fav_note"
+            android:textColor="@android:color/white"
+            android:textSize="32sp"
+            android:gravity="center"
+            android:visibility="gone"
+    />
+
+</FrameLayout>
